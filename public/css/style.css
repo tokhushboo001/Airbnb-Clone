@@ -120,10 +120,17 @@
     position: fixed;
 }
 
-
-/* map */
-
 #map {
-    height: 400px;
-    width: 80vh;
+    height: 300px;
+    /* rectangular size */
+    width: 100%;
+    max-width: 800px;
+    /* keeps map box rectangular */
+    border-radius: 10px;
+    /* smooth corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.maplibregl-ctrl-attrib {
+    display: none !important;
 }

@@ -128,7 +128,7 @@ const sampleListings = [{
         },
         // image: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2FtcGluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
         price: 1800,
-        location: "Amsterdam",
+        location: "Amesdram",
         country: "Netherlands",
     },
     {
@@ -157,14 +157,14 @@ const sampleListings = [{
     },
     {
         title: "Historic Brownstone in Boston",
-        description: "Step back in time in this elegant historic brownstone located in the heart of Boston.",
+        description: "c",
         image: {
             filename: "listingimage",
             url: "https://images.unsplash.com/photo-1533619239233-6280475a633a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHNreSUyMHZhY2F0aW9ufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
         },
         // image: "https://images.unsplash.com/photo-1533619239233-6280475a633a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHNreSUyMHZhY2F0aW9ufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
         price: 2200,
-        location: "Boston",
+        location: "Fiji",
         country: "United States",
     },
     {
@@ -191,18 +191,7 @@ const sampleListings = [{
         location: "Banff",
         country: "Canada",
     },
-    {
-        title: "Art Deco Apartment in Miami",
-        description: "Step into the glamour of the 1920s in this stylish Art Deco apartment in South Beach.",
-        image: {
-            filename: "listingimage",
-            url: "https://plus.unsplash.com/premium_photo-1670963964797-942df1804579?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGxvZGdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-        },
-        // image: "https://plus.unsplash.com/premium_photo-1670963964797-942df1804579?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGxvZGdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-        price: 1600,
-        location: "Miami",
-        country: "United States",
-    },
+
     {
         title: "Tropical Villa in Phuket",
         description: "Escape to a tropical paradise in this luxurious villa with a private infinity pool in Phuket.",

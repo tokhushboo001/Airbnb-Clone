@@ -10,21 +10,42 @@ import { storage } from "../cloudConfig.js";
 
 const upload = multer({ storage });
 
-router.route("/")
+// router.route("/")
 
-.get(wrapAsync(listingController.index))
-    .post(isLoggedIn, validateListing, upload.single("listing[image]"), wrapAsync(listingController.createListing));
+// .get(wrapAsync(listingController.index))
+//     .post(isLoggedIn, validateListing, upload.single("listing[image]"), wrapAsync(listingController.createListing));
+//gpt
+router.route("/")
+    .get(wrapAsync(listingController.index))
+    .post(
+        isLoggedIn,
+        upload.single("listing[image]"),
+        validateListing,
+        wrapAsync(listingController.createListing)
+    );
 
 
 //new route
 router.get("/new", isLoggedIn, listingController.renderNewForm);
 
 
+// router.route("/:id")
+//     .get(wrapAsync(listingController.showListing))
+//     .put(isLoggedIn, isOwner, upload.single("listing[image]"), validateListing,
+//         wrapAsync(listingController.updateListing))
+//     .delete(isLoggedIn, isOwner, wrapAsync(listingController.destroyListing));
+//gpt
 router.route("/:id")
     .get(wrapAsync(listingController.showListing))
-    .put(isLoggedIn, isOwner, upload.single("listing[image]"), validateListing,
-        wrapAsync(listingController.updateListing))
+    .put(
+        isLoggedIn,
+        isOwner,
+        upload.single("listing[image]"), // upload first
+        validateListing, // then validate
+        wrapAsync(listingController.updateListing)
+    )
     .delete(isLoggedIn, isOwner, wrapAsync(listingController.destroyListing));
+
 
 //edit route
 router.get("/:id/edit", isLoggedIn, isOwner, wrapAsync(listingController.renderEditForm));

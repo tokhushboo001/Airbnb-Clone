@@ -1,7 +1,6 @@
-//const mongoose = require("mongoose");
 import mongoose from "mongoose";
 const Schema = mongoose.Schema;
-//const Review = require("./review.js");
+
 import Review from "./review.js";
 const listingSchema = new Schema({
 
@@ -21,7 +20,11 @@ const listingSchema = new Schema({
         ref: "Review",
 
     }, ],
-    // country: String,
+    country: {
+
+        type: String,
+        required: true,
+    },
     owner: {
         type: Schema.Types.ObjectId,
         ref: "User",
